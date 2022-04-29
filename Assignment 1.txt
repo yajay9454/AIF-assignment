@@ -1,0 +1,469 @@
+        -------------Assignment 1--------
+
+Q1------Swap two numbers using temporary variable
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner number = new Scanner(System.in); 
+    System.out.println("Enter x");
+
+    int  x = number.nextInt(); 
+     System.out.println("Enter y");
+
+    int  y = number.nextInt();
+    System.out.println("Value of x is " + x
+                           + " and Value of y is " + y);
+    int temp = x;
+        x = y;
+        y = temp;
+        System.out.println("Value of x is " + x
+                           + " and Value of y is " + y);
+    
+    
+    
+    }
+}
+
+output----
+Enter x
+20
+Enter y
+30
+Value of x is 30 and Value of y is 20
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+
+Q2-Swap two numbers without using temporary variable-------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner number = new Scanner(System.in); 
+    System.out.println("Enter x");
+
+    int  x = number.nextInt(); 
+     System.out.println("Enter y");
+
+    int  y = number.nextInt();
+    System.out.println("Value of x is " + x
+                           + " and Value of y is " + y);
+
+    x = x - y;
+    y = x + y;
+    x = y - x;
+    System.out.println("Value of x is " + x
+                           + " and Value of y is " + y);
+    
+    
+    
+    }
+}
+
+output------------------
+
+Enter x
+10
+Enter y
+20
+Value of x is 20 and Value of y is 10
+
+
+** Process exited - Return Code: 0 **
+
+
+Q3--- Check whether a number is even or odd using ternary operator------------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner number = new Scanner(System.in); 
+    System.out.println("Enter a number");
+    
+    int x=number.nextInt();
+    
+    String result = x%2==0 ? "Even" : "Odd";
+    System.out.println(x +" is "+ result);
+    }
+}
+
+output-----
+
+Enter a number
+5
+5 is Odd
+
+
+** Process exited - Return Code: 0 **
+
+
+Q4---------Check whether an alphabet is vowel or consonant using if..else statement-----------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter an Alphabet");
+    
+    char ch = sc.next().charAt(0); 
+    if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
+        else
+            System.out.println(ch + " is consonant");
+            }
+}
+
+
+output----
+
+Enter an Alphabet
+b
+b is consonant
+
+
+** Process exited - Return Code: 0 **
+
+
+
+Q5-----Check whether an alphabet is vowel or consonant using switch statement---------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter an Alphabet");
+    
+    char ch = sc.next().charAt(0); 
+      switch(ch)
+    {
+        case 'a': 
+        case 'e': 
+        case 'i':
+        case 'o':
+        case 'u':
+        System.out.println("Vowel");
+            break;
+
+        default: System.out.println("consonant");
+    }
+
+    }
+}
+
+
+output----------
+
+Enter an Alphabet
+b
+consonant
+
+
+** Process exited - Return Code: 0 **
+
+
+Q6-------Find Largest Among three numbers using if..else statement----------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter Firstnumber");
+    double n1=sc.nextDouble();
+    System.out.println("Enter secondnumber");
+    double n2=sc.nextDouble();
+    System.out.println("Enter Thirdnumber");
+    double n3=sc.nextDouble();
+     if( n1 >= n2 && n1 >= n3)
+            System.out.println(n1 + " is the largest number.");
+
+        else if (n2 >= n1 && n2 >= n3)
+            System.out.println(n2 + " is the largest number.");
+
+        else
+            System.out.println(n3 + " is the largest number.");
+    }
+}
+
+output-----------
+
+Enter Firstnumber
+10
+Enter secondnumber
+20
+Enter Thirdnumber
+30.6
+30.6 is the largest number.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Q7-------Find the largest number among three using nested if..else statement-----------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter Firstnumber");
+    double n1=sc.nextDouble();
+    System.out.println("Enter secondnumber");
+    double n2=sc.nextDouble();
+    System.out.println("Enter Thirdnumber");
+    double n3=sc.nextDouble();
+    
+        if(n1 >= n2) {
+            if(n1 >= n3)
+                System.out.println(n1 + " is the largest number.");
+            else
+                System.out.println(n3 + " is the largest number.");
+        } else {
+            if(n2 >= n3)
+                System.out.println(n2 + " is the largest number.");
+            else
+                System.out.println(n3 + " is the largest number.");
+        }
+    }
+}
+
+
+output--------------------
+
+Enter Firstnumber
+20
+Enter secondnumber
+30
+Enter Thirdnumber
+19.5
+30.0 is the largest number.
+
+
+** Process exited - Return Code: 0 **
+
+
+Q8--------------------------Java Program to Find Roots of a Quadratic Equation-------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter a");
+    double a=sc.nextDouble();
+    System.out.println("Enter b");
+    double b=sc.nextDouble();
+    System.out.println("Enter c");
+    double c=sc.nextDouble();
+    double firstroot, secondroot;
+        double det = b * b - 4 * a * c;
+     if (det > 0) {
+            firstroot = (-b + Math.sqrt(det)) / (2 * a);
+            secondroot = (-b - Math.sqrt(det)) / (2 * a);
+  
+            System.out.format(
+                "First Root = %.2f and Second Root = %.2f",
+                firstroot, secondroot);
+        }
+        else if (det == 0) {
+            firstroot = secondroot = -b / (2 * a);
+  
+            System.out.format(
+                "First Root = Second Root = %.2f;",
+                firstroot);
+        }
+        else {
+  
+            double real = -b / (2 * a);
+  
+            double imaginary = Math.sqrt(-det) / (2 * a);
+  
+            System.out.printf("First Root = %.2f+%.2fi",
+                              real, imaginary);
+            System.out.printf("\nSecond Root = %.2f-%.2fi",
+                              real, imaginary);
+        }
+    }
+}
+
+output----------------------------
+
+Enter a
+5
+Enter b
+2
+Enter c
+4
+First Root = -0.20+0.87i
+Second Root = -0.20-0.87i
+
+** Process exited - Return Code: 0 **
+
+
+Q9------------------Check if a Number is Positive or Negative using if else-------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter number");
+    double num=sc.nextDouble();
+
+if(num>0)  
+{  
+System.out.println("The number is positive.");  
+}  
+
+else if(num<0)  
+{  
+System.out.println("The number is negative.");  
+}  
+ else  
+{  
+System.out.println("The number is zero.");  
+}  
+}
+}
+
+
+output-------------------------
+
+Enter number
+-7.3
+The number is negative.
+
+
+** Process exited - Return Code: 0 **
+
+
+Q10----------------Java Program to Check Alphabet using if else-------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter character");
+    char c = sc.next().charAt(0); 
+     if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            System.out.println(c + " is an alphabet.");
+        else
+            System.out.println(c + " is not an alphabet.");
+}
+}
+
+output------------
+
+Enter character
+%
+% is not an alphabet.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
